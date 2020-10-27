@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D6FC79625401783003EDED3 /* Vcl.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6FC79425401783003EDED3 /* Vcl.pbobjc.m */; };
+		4DA94F93253ECF6C00F40819 /* libffi_c_vcl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA94F92253ECF6C00F40819 /* libffi_c_vcl.a */; };
+		4DA94F95253ECF7000F40819 /* libffi_c_crypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA94F94253ECF7000F40819 /* libffi_c_crypto.a */; };
+		4DA94FAA253F056B00F40819 /* Common.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA94FA8253F056B00F40819 /* Common.pbobjc.m */; };
+		5AE809CCA0C2D942BD08890C /* Pods_WedprDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B26128068B37C0ADC5B8BA69 /* Pods_WedprDemo.framework */; };
+		DABD4CDF25342CA1001DE7B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DABD4CDE25342CA1001DE7B8 /* AppDelegate.m */; };
+		DABD4CE225342CA1001DE7B8 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DABD4CE125342CA1001DE7B8 /* SceneDelegate.m */; };
+		DABD4CE525342CA1001DE7B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DABD4CE425342CA1001DE7B8 /* ViewController.m */; };
+		DABD4CE825342CA1001DE7B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABD4CE625342CA1001DE7B8 /* Main.storyboard */; };
+		DABD4CEA25342CA2001DE7B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DABD4CE925342CA2001DE7B8 /* Assets.xcassets */; };
+		DABD4CED25342CA2001DE7B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABD4CEB25342CA2001DE7B8 /* LaunchScreen.storyboard */; };
+		DABD4CF025342CA2001DE7B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DABD4CEF25342CA2001DE7B8 /* main.m */; };
+		DABD4CF825342E53001DE7B8 /* OpenSSL in Resources */ = {isa = PBXBuildFile; fileRef = DABD4CF625342E53001DE7B8 /* OpenSSL */; };
+		DABD4CF925342E53001DE7B8 /* WeDPR in Resources */ = {isa = PBXBuildFile; fileRef = DABD4CF725342E53001DE7B8 /* WeDPR */; };
+		DABD4D01253431A0001DE7B8 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DABD4CFF253431A0001DE7B8 /* libssl.a */; };
+		DABD4D02253431A0001DE7B8 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DABD4D00253431A0001DE7B8 /* libcrypto.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2017292B165C9D313A7968D2 /* Pods-WedprDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WedprDemo.debug.xcconfig"; path = "Target Support Files/Pods-WedprDemo/Pods-WedprDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		4D6FC79425401783003EDED3 /* Vcl.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vcl.pbobjc.m; sourceTree = "<group>"; };
+		4D6FC79525401783003EDED3 /* Vcl.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vcl.pbobjc.h; sourceTree = "<group>"; };
+		4DA94F92253ECF6C00F40819 /* libffi_c_vcl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libffi_c_vcl.a; path = WedprDemo/WeDPR/libffi_c_vcl.a; sourceTree = "<group>"; };
+		4DA94F94253ECF7000F40819 /* libffi_c_crypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libffi_c_crypto.a; path = WedprDemo/WeDPR/libffi_c_crypto.a; sourceTree = "<group>"; };
+		4DA94FA8253F056B00F40819 /* Common.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.pbobjc.m; sourceTree = "<group>"; };
+		4DA94FA9253F056B00F40819 /* Common.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.pbobjc.h; sourceTree = "<group>"; };
+		B26128068B37C0ADC5B8BA69 /* Pods_WedprDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WedprDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D632AA6EDF1EABB5B4FD05BD /* Pods-WedprDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WedprDemo.release.xcconfig"; path = "Target Support Files/Pods-WedprDemo/Pods-WedprDemo.release.xcconfig"; sourceTree = "<group>"; };
+		DABD4CDA25342CA1001DE7B8 /* WedprDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WedprDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DABD4CDD25342CA1001DE7B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DABD4CDE25342CA1001DE7B8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DABD4CE025342CA1001DE7B8 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		DABD4CE125342CA1001DE7B8 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		DABD4CE325342CA1001DE7B8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DABD4CE425342CA1001DE7B8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DABD4CE725342CA1001DE7B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DABD4CE925342CA2001DE7B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DABD4CEC25342CA2001DE7B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DABD4CEE25342CA2001DE7B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DABD4CEF25342CA2001DE7B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DABD4CF625342E53001DE7B8 /* OpenSSL */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OpenSSL; sourceTree = "<group>"; };
+		DABD4CF725342E53001DE7B8 /* WeDPR */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WeDPR; sourceTree = "<group>"; };
+		DABD4CFF253431A0001DE7B8 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = WedprDemo/OpenSSL/libssl.a; sourceTree = "<group>"; };
+		DABD4D00253431A0001DE7B8 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = WedprDemo/OpenSSL/libcrypto.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DABD4CD725342CA1001DE7B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DABD4D01253431A0001DE7B8 /* libssl.a in Frameworks */,
+				DABD4D02253431A0001DE7B8 /* libcrypto.a in Frameworks */,
+				4DA94F95253ECF7000F40819 /* libffi_c_crypto.a in Frameworks */,
+				4DA94F93253ECF6C00F40819 /* libffi_c_vcl.a in Frameworks */,
+				5AE809CCA0C2D942BD08890C /* Pods_WedprDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A46A3F56F4C6E7E3ACCBD23 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2017292B165C9D313A7968D2 /* Pods-WedprDemo.debug.xcconfig */,
+				D632AA6EDF1EABB5B4FD05BD /* Pods-WedprDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DABD4CD125342CA1001DE7B8 = {
+			isa = PBXGroup;
+			children = (
+				DABD4CDC25342CA1001DE7B8 /* WedprDemo */,
+				DABD4CDB25342CA1001DE7B8 /* Products */,
+				DABD4CFC25343189001DE7B8 /* Frameworks */,
+				7A46A3F56F4C6E7E3ACCBD23 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		DABD4CDB25342CA1001DE7B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DABD4CDA25342CA1001DE7B8 /* WedprDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DABD4CDC25342CA1001DE7B8 /* WedprDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4D6FC79525401783003EDED3 /* Vcl.pbobjc.h */,
+				4D6FC79425401783003EDED3 /* Vcl.pbobjc.m */,
+				DABD4CF625342E53001DE7B8 /* OpenSSL */,
+				DABD4CF725342E53001DE7B8 /* WeDPR */,
+				DABD4CDD25342CA1001DE7B8 /* AppDelegate.h */,
+				DABD4CDE25342CA1001DE7B8 /* AppDelegate.m */,
+				DABD4CE025342CA1001DE7B8 /* SceneDelegate.h */,
+				DABD4CE125342CA1001DE7B8 /* SceneDelegate.m */,
+				DABD4CE325342CA1001DE7B8 /* ViewController.h */,
+				4DA94FA9253F056B00F40819 /* Common.pbobjc.h */,
+				4DA94FA8253F056B00F40819 /* Common.pbobjc.m */,
+				DABD4CE425342CA1001DE7B8 /* ViewController.m */,
+				DABD4CE625342CA1001DE7B8 /* Main.storyboard */,
+				DABD4CE925342CA2001DE7B8 /* Assets.xcassets */,
+				DABD4CEB25342CA2001DE7B8 /* LaunchScreen.storyboard */,
+				DABD4CEE25342CA2001DE7B8 /* Info.plist */,
+				DABD4CEF25342CA2001DE7B8 /* main.m */,
+			);
+			path = WedprDemo;
+			sourceTree = "<group>";
+		};
+		DABD4CFC25343189001DE7B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DABD4D00253431A0001DE7B8 /* libcrypto.a */,
+				DABD4CFF253431A0001DE7B8 /* libssl.a */,
+				4DA94F92253ECF6C00F40819 /* libffi_c_vcl.a */,
+				4DA94F94253ECF7000F40819 /* libffi_c_crypto.a */,
+				B26128068B37C0ADC5B8BA69 /* Pods_WedprDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DABD4CD925342CA1001DE7B8 /* WedprDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DABD4CF325342CA2001DE7B8 /* Build configuration list for PBXNativeTarget "WedprDemo" */;
+			buildPhases = (
+				53D663F65CF23EC2C014AEA1 /* [CP] Check Pods Manifest.lock */,
+				DABD4CD625342CA1001DE7B8 /* Sources */,
+				DABD4CD725342CA1001DE7B8 /* Frameworks */,
+				DABD4CD825342CA1001DE7B8 /* Resources */,
+				F1F87FF0F812F9A8F6E22F59 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WedprDemo;
+			productName = WedprDemo;
+			productReference = DABD4CDA25342CA1001DE7B8 /* WedprDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DABD4CD225342CA1001DE7B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = lssong;
+				TargetAttributes = {
+					DABD4CD925342CA1001DE7B8 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = DABD4CD525342CA1001DE7B8 /* Build configuration list for PBXProject "WedprDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DABD4CD125342CA1001DE7B8;
+			productRefGroup = DABD4CDB25342CA1001DE7B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DABD4CD925342CA1001DE7B8 /* WedprDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DABD4CD825342CA1001DE7B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DABD4CED25342CA2001DE7B8 /* LaunchScreen.storyboard in Resources */,
+				DABD4CEA25342CA2001DE7B8 /* Assets.xcassets in Resources */,
+				DABD4CE825342CA1001DE7B8 /* Main.storyboard in Resources */,
+				DABD4CF825342E53001DE7B8 /* OpenSSL in Resources */,
+				DABD4CF925342E53001DE7B8 /* WeDPR in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53D663F65CF23EC2C014AEA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WedprDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1F87FF0F812F9A8F6E22F59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WedprDemo/Pods-WedprDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WedprDemo/Pods-WedprDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WedprDemo/Pods-WedprDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DABD4CD625342CA1001DE7B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA94FAA253F056B00F40819 /* Common.pbobjc.m in Sources */,
+				DABD4CE525342CA1001DE7B8 /* ViewController.m in Sources */,
+				DABD4CDF25342CA1001DE7B8 /* AppDelegate.m in Sources */,
+				DABD4CF025342CA2001DE7B8 /* main.m in Sources */,
+				4D6FC79625401783003EDED3 /* Vcl.pbobjc.m in Sources */,
+				DABD4CE225342CA1001DE7B8 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DABD4CE625342CA1001DE7B8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DABD4CE725342CA1001DE7B8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DABD4CEB25342CA2001DE7B8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DABD4CEC25342CA2001DE7B8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DABD4CF125342CA2001DE7B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DABD4CF225342CA2001DE7B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DABD4CF425342CA2001DE7B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2017292B165C9D313A7968D2 /* Pods-WedprDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = WedprDemo/Assets.xcassets;
+				DEVELOPMENT_TEAM = 7DYQK4TNS7;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/WedprDemo/WeDPR/";
+				INFOPLIST_FILE = WedprDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WedprDemo/WeDPR",
+					"$(PROJECT_DIR)/WedprDemo/OpenSSL",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.webank.WedprDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DABD4CF525342CA2001DE7B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D632AA6EDF1EABB5B4FD05BD /* Pods-WedprDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = WedprDemo/Assets.xcassets;
+				DEVELOPMENT_TEAM = 7DYQK4TNS7;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/WedprDemo/WeDPR/";
+				INFOPLIST_FILE = WedprDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WedprDemo/WeDPR",
+					"$(PROJECT_DIR)/WedprDemo/OpenSSL",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.webank.WedprDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DABD4CD525342CA1001DE7B8 /* Build configuration list for PBXProject "WedprDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DABD4CF125342CA2001DE7B8 /* Debug */,
+				DABD4CF225342CA2001DE7B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DABD4CF325342CA2001DE7B8 /* Build configuration list for PBXNativeTarget "WedprDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DABD4CF425342CA2001DE7B8 /* Debug */,
+				DABD4CF525342CA2001DE7B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DABD4CD225342CA1001DE7B8 /* Project object */;
+}
