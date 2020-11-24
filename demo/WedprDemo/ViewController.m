@@ -4,9 +4,11 @@
 #import "Wedpr/WedprCommon.h"
 #import "Wedpr/WedprCrypto.h"
 #import "Wedpr/WedprVcl.h"
+#import "Wedpr/WedprSelectiveDisclosure.h"
 // TODO: try to move this to protos folder
 #import "Common.pbobjc.h"
 #import "Vcl.pbobjc.h"
+#import "SelectiveDisclosure.pbobjc.h"
 
 @interface ViewController ()
 
@@ -18,7 +20,8 @@
     [super viewDidLoad];
     // Test your demo code here.
     vclDemo(2,2,4);
-//    cryptoDemo();
+    cryptoDemo();
+    selectiveDisclosureDemo();
 
 }
 
@@ -119,4 +122,102 @@ void cryptoDemo() {
     printf("decryptedData = :%s", decryptedData);
 }
 
+void selectiveDisclosureDemo() {
+    printf("\n*******\nSELECTIVE DISCLOSURE RUN\n*******\n");
+    // issuer make template
+
+    NSError *error;
+    AttributeTemplate *attributeTemplate = [[AttributeTemplate alloc] init];
+    [attributeTemplate.attributeKeyArray addObject:@"age"];
+    [attributeTemplate.attributeKeyArray addObject:@"id"];
+    [attributeTemplate.attributeKeyArray addObject:@"time"];
+    
+    
+    NSString *attributeTemplateStr = [[attributeTemplate data] base64EncodedStringWithOptions:0];
+    
+    NSString *selectiveDisclosureResultStr = @(*wedpr_make_credential_template([attributeTemplateStr UTF8String]));
+    if(selectiveDisclosureResultStr.length == 0) {
+        // The above API call should not fail.
+        printf("API loading error");
+        return;
+    }
+    NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:selectiveDisclosureResultStr options:0];
+    SelectiveDisclosureResult *selectiveDisclosureResult = [Keypair parseFromData:decodedData error:&error];
+    printf("credentialTemplate = :%s", selectiveDisclosureResult.credentialTemplate);
+    printf("templateSecretKey = :%s", selectiveDisclosureResult.templateSecretKey);
+    NSString *templateSecretKeyStr = [[selectiveDisclosureResult.templateSecretKey data] base64EncodedStringWithOptions:0];
+    
+    // User fill template
+    CredentialInfo *credentialInfo = [[CredentialInfo alloc] init];
+    StringToStringPair *stringToStringPair = [[StringToStringPair alloc] init];
+    stringToStringPair.key = @"age";
+    stringToStringPair.key = @"18";
+    [credentialInfo.attributePairArray addObject:stringToStringPair];
+    stringToStringPair.key = @"id";
+    stringToStringPair.key = @"123456";
+    [credentialInfo.attributePairArray addObject:stringToStringPair];
+    stringToStringPair.key = @"time";
+    stringToStringPair.key = @"20201124";
+    [credentialInfo.attributePairArray addObject:stringToStringPair];
+    
+    NSString *credentialInfoStr = [[credentialInfo data] base64EncodedStringWithOptions:0];
+    
+    NSString *credentialTemplateStr = [[selectiveDisclosureResult.credentialTemplate data] base64EncodedStringWithOptions:0];
+
+    selectiveDisclosureResultStr = @(*wedpr_make_credential([credentialInfoStr UTF8String], [credentialTemplateStr UTF8String]));
+    printf("credentialSignatureRequest = :%s", selectiveDisclosureResult.credentialSignatureRequest);
+    printf("masterSecret = :%s", selectiveDisclosureResult.masterSecret);
+    printf("credentialSecretsBlindingFactors = :%s", selectiveDisclosureResult.credentialSecretsBlindingFactors);
+    printf("userNonce = :%s", selectiveDisclosureResult.nonce);
+    
+    NSString *credentialSecretsBlindingFactors = selectiveDisclosureResult.credentialSecretsBlindingFactors;
+    NSString *masterSecret = selectiveDisclosureResult.masterSecret;
+    
+
+    
+    // Issuer sign user's request to generate credential
+    NSString *credentialSignatureRequestStr = [[selectiveDisclosureResult.credentialSignatureRequest data] base64EncodedStringWithOptions:0];
+    NSString *masterSecretStr = selectiveDisclosureResult.masterSecret;
+    
+    selectiveDisclosureResultStr = @(*wedpr_sign_credential([credentialTemplateStr UTF8String], [templateSecretKeyStr UTF8String], [credentialSignatureRequestStr UTF8String], @"id1", [selectiveDisclosureResult.nonce UTF8String]));
+    
+    printf("credentialSignature = :%s", selectiveDisclosureResult.credentialSignature);
+    printf("nonceCredential = :%s", selectiveDisclosureResult.nonceCredential);
+    NSString *nonceCredential = selectiveDisclosureResult.nonceCredential;
+    
+    // User generate new credentialSignature
+    NSString *credentialSignatureStr = [[selectiveDisclosureResult.credentialSignature data] base64EncodedStringWithOptions:0];
+    
+    selectiveDisclosureResultStr = @(*wedpr_blind_credential_signature([credentialSignatureStr UTF8String], [credentialInfoStr UTF8String], [credentialTemplateStr UTF8String], [masterSecret UTF8String], [credentialSecretsBlindingFactors UTF8String], [nonceCredential UTF8String]));
+    
+    printf("New credentialSignature = :%s", selectiveDisclosureResult.nonceCredential);
+    NSString *newCredentialSignatureStr = [[selectiveDisclosureResult.credentialSignature data] base64EncodedStringWithOptions:0];
+    
+
+    // Verifier set verification rules
+    VerificationRule *verificationRule = [[VerificationRule alloc] init];
+    Predicate *predicate = [[Predicate alloc] init];
+    predicate.attributeName = @"age";
+    predicate.predicateType = @"GT";
+    predicate.value = 17;
+    [verificationRule.predicateAttributeArray addObject:predicate];
+    predicate.attributeName = @"gender";
+    predicate.predicateType = @"EQ";
+    predicate.value = 1;
+    [verificationRule.predicateAttributeArray addObject:predicate];
+    
+    NSString *verificationRuleStr = [[verificationRule data] base64EncodedStringWithOptions:0];
+    
+    selectiveDisclosureResult = @(*wedpr_prove_credential_info([verificationRuleStr UTF8String], [newCredentialSignatureStr UTF8String], [credentialInfoStr UTF8String], [credentialTemplateStr UTF8String], [masterSecret UTF8String]));
+    
+    printf("verificationRequest = :%s", selectiveDisclosureResult.verificationRequest);
+    
+    NSString *verificationRequestStr = [[selectiveDisclosureResult.verificationRequest data] base64EncodedStringWithOptions:0];
+    
+    selectiveDisclosureResult = @(*wedpr_verify_proof([verificationRuleStr UTF8String], [verificationRequestStr UTF8String]));
+    printf("result = :%s", selectiveDisclosureResult.result);
+    
+    selectiveDisclosureResult = @(*wedpr_get_revealed_attrs_from_verification_request([verificationRequestStr UTF8String]));
+    printf("revealedAttributeInfo = :%s", selectiveDisclosureResult.revealedAttributeInfo);
+}
 @end
