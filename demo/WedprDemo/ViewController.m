@@ -127,7 +127,7 @@ void scdDemo() {
     NSError *error;
 
     // An issuer defines the certificate schema and generates the certificate template.
-    schema *schema = [[schema alloc] init];
+    CertificateSchema *schema = [[CertificateSchema alloc] init];
     [schema.attributeNameArray addObject:@"name"];
     [schema.attributeNameArray addObject:@"age"];
     [schema.attributeNameArray addObject:@"gender"];
