@@ -13,6 +13,8 @@
 		4D604F80256D28F600F61517 /* libffi_c_crypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D604F7E256D28F600F61517 /* libffi_c_crypto.a */; };
 		4D604F83256D2A9C00F61517 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D604F81256D2A9B00F61517 /* libssl.a */; };
 		4D604F84256D2A9C00F61517 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D604F82256D2A9B00F61517 /* libcrypto.a */; };
+		4D9BFA9A260C34C80087A9CF /* Hdk.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9BFA98260C34C80087A9CF /* Hdk.pbobjc.m */; };
+		4D9BFA9D260C3CEA0087A9CF /* libffi_c_hdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9BFA9C260C3CEA0087A9CF /* libffi_c_hdk.a */; };
 		4D9EB78A254808D600A7F2D2 /* Wedpr in Resources */ = {isa = PBXBuildFile; fileRef = 4D9EB789254808D600A7F2D2 /* Wedpr */; };
 		4D9EB78E254808ED00A7F2D2 /* Common.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EB78C254808ED00A7F2D2 /* Common.pbobjc.m */; };
 		4D9EB792254808F100A7F2D2 /* Vcl.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EB791254808F100A7F2D2 /* Vcl.pbobjc.m */; };
@@ -54,6 +56,9 @@
 		4D604F7E256D28F600F61517 /* libffi_c_crypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libffi_c_crypto.a; path = ../../../../Downloads/v1.1.0/ios_sdk_static_lib/libffi_c_crypto.a; sourceTree = "<group>"; };
 		4D604F81256D2A9B00F61517 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../../../../Downloads/OpenSSL/libssl.a; sourceTree = "<group>"; };
 		4D604F82256D2A9B00F61517 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../../../../Downloads/OpenSSL/libcrypto.a; sourceTree = "<group>"; };
+		4D9BFA98260C34C80087A9CF /* Hdk.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hdk.pbobjc.m; sourceTree = "<group>"; };
+		4D9BFA99260C34C80087A9CF /* Hdk.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hdk.pbobjc.h; sourceTree = "<group>"; };
+		4D9BFA9C260C3CEA0087A9CF /* libffi_c_hdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libffi_c_hdk.a; sourceTree = "<group>"; };
 		4D9EB789254808D600A7F2D2 /* Wedpr */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Wedpr; sourceTree = "<group>"; };
 		4D9EB78C254808ED00A7F2D2 /* Common.pbobjc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Common.pbobjc.m; sourceTree = "<group>"; };
 		4D9EB78D254808ED00A7F2D2 /* Common.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.pbobjc.h; sourceTree = "<group>"; };
@@ -81,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D9BFA9D260C3CEA0087A9CF /* libffi_c_hdk.a in Frameworks */,
 				4D604F83256D2A9C00F61517 /* libssl.a in Frameworks */,
 				50B89F42FD54280D5FB2870D /* Pods_WedprDemo.framework in Frameworks */,
 				4D604F84256D2A9C00F61517 /* libcrypto.a in Frameworks */,
@@ -133,6 +139,8 @@
 		DABD4CDC25342CA1001DE7B8 /* WedprDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4D9BFA99260C34C80087A9CF /* Hdk.pbobjc.h */,
+				4D9BFA98260C34C80087A9CF /* Hdk.pbobjc.m */,
 				4D54816F2578C3DE00DA83D7 /* Scd.pbobjc.h */,
 				4D54816E2578C3DE00DA83D7 /* Scd.pbobjc.m */,
 				4D9EB79B25480A3200A7F2D2 /* OpenSSL */,
@@ -159,6 +167,7 @@
 		DABD4CFC25343189001DE7B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D9BFA9C260C3CEA0087A9CF /* libffi_c_hdk.a */,
 				4D604F82256D2A9B00F61517 /* libcrypto.a */,
 				4D5481722578C5B600DA83D7 /* libffi_c_scd.a */,
 				4D604F81256D2A9B00F61517 /* libssl.a */,
@@ -197,7 +206,7 @@
 		DABD4CD225342CA1001DE7B8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = lssong;
 				TargetAttributes = {
 					DABD4CD925342CA1001DE7B8 = {
@@ -312,6 +321,7 @@
 				4D5481702578C3DE00DA83D7 /* Scd.pbobjc.m in Sources */,
 				4D9EB78E254808ED00A7F2D2 /* Common.pbobjc.m in Sources */,
 				DABD4CDF25342CA1001DE7B8 /* AppDelegate.m in Sources */,
+				4D9BFA9A260C34C80087A9CF /* Hdk.pbobjc.m in Sources */,
 				DABD4CF025342CA2001DE7B8 /* main.m in Sources */,
 				4D9EB792254808F100A7F2D2 /* Vcl.pbobjc.m in Sources */,
 				DABD4CE225342CA1001DE7B8 /* SceneDelegate.m in Sources */,
@@ -464,7 +474,7 @@
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/WedprDemo/WeDPR/";
 				INFOPLIST_FILE = WedprDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -495,7 +505,7 @@
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/WedprDemo/WeDPR/";
 				INFOPLIST_FILE = WedprDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
