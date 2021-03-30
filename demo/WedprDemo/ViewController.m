@@ -241,11 +241,11 @@ void scdDemo() {
 }
 
 void KtbDemo() {
-    printf("\n*******\Ktb DEMO RUN\n*******\n");
+    printf("\n*******\nKTB DEMO RUN\n*******\n");
     NSError *error;
     // Generates a keyPair from the secp256k1 curve.
-    unsigned char word_count = 3;
-    NSString *hdkResultStr = @(*wedpr_hdk_create_mnemonic_en(word_count));
+    unsigned char word_count = 24;
+    NSString *hdkResultStr = @(*wedpr_ktb_hdk_create_mnemonic_en(word_count));
     if(hdkResultStr.length == 0) {
         // The above API call should not fail.
         printf("API loading error");
@@ -253,31 +253,26 @@ void KtbDemo() {
     }
     NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:hdkResultStr options:0];
     HdkResult *hdkResult = [HdkResult parseFromData:decodedData error:&error];
-    
     NSString *mnemonic = hdkResult.masterKey;
     printf("mnemonic = :%s", mnemonic);
-    
-    NSString *password = @"123456";
-    
-    hdkResultStr = @(*wedpr_hdk_create_master_key_en([password UTF8String], [mnemonic UTF8String]));
+
+    NSString *password = @"Do not use real password";
+    hdkResultStr = @(*wedpr_ktb_hdk_create_master_key_en([password UTF8String], [mnemonic UTF8String]));
     decodedData = [[NSData alloc] initWithBase64EncodedString:hdkResultStr options:0];
     hdkResult = [HdkResult parseFromData:decodedData error:&error];
-    
     NSString *masterKeyStr = [hdkResult.masterKey base64EncodedStringWithOptions:0];
-    
+    printf("masterKey = :%s", masterKeyStr);
+
     int purpose_type = 44;
     int asset_type = 513866;
     int account = 1;
     int change = 0;
     int address_index = 1000;
-    
-    
-    hdkResultStr = @(*wedpr_hdk_derive_extended_key([masterKeyStr UTF8String], purpose_type, asset_type, account, change, address_index));
-    
+    hdkResultStr = @(*wedpr_ktb_hdk_derive_extended_key([masterKeyStr UTF8String], purpose_type, asset_type, account, change, address_index));
     NSString *extendedPrivateKey = [hdkResult.keyPair.extendedPrivateKey base64EncodedStringWithOptions:0];
     NSString *extendedPublicKey = [hdkResult.keyPair.extendedPublicKey base64EncodedStringWithOptions:0];
-    
-    
+    printf("extendedPrivateKey = :%s", extendedPrivateKey);
+    printf("extendedPublicKey = :%s", extendedPublicKey);
 }
 
 @end
